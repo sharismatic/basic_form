@@ -7,11 +7,35 @@
 	<style type="text/css">
 	
 	
-	input {
-		background: #FFC;	
-		margin: 10px;
+	.standard_input {
+		background: #fff;	
+		padding: 5px 10px;
+		color: solid 1px #ccc;
+		font-size: 13px;
+		display: block;
+		width: 400px;
+		margin-top: 20px;
+		font-family: 'helvetica';
+		text-transform: uppercase;
+		letter-spacing: 1px;
 	}
 
+	h1{
+		font-family: 'helvetica';
+		text-transform: uppercase;
+
+	}
+	.break{
+		margin-top: 10px;
+		padding-left: 10px;	
+
+	}
+
+	.submit_button{
+		background-color: #ccc;
+		width: 100px;
+		height: 20px;
+	}
 	</style>
 
 
@@ -23,9 +47,36 @@
 		Our Form
 	</h1>
 	<form method"post" action="/login.php">
+		
 		<input type="text" id="first_name" name="first_name" class="standard_input" placeholder="First Name"/>
-		<input type="email" id="email" name="email" class="email" placeholder="Enter your email here"/>
-		<input type="password" name="password" class="password" placeholder="enter your password here"/>
+		<input type="email" id="email" name="email" class="standard_input" placeholder="Enter your email here"/>
+		<input type="password" name="password" id="password" class="standard_input" placeholder="enter your password here"/>
+		<textarea name="comments" id="comments" class="standard_input" placeholder="comments"></textarea>
+		
+		<div class="break"> 
+			<input type="radio" name="gender" value="male"/>Male
+			<input type="radio" name="gender" value="female"/>Female
+		</div>
+
+		<div class="break">
+			<input type="checkbox" name="contact" value="phone"/>Phone
+			<input type="checkbox" name="contact" value="email"/>Email
+
+		</div>
+		<div class="break">
+			<select name="dob">
+				<option value="" selected>Select an age</option>
+				<option value="1988">1988</option>
+				<option value="1987">1987</option>
+				<option value="1986">1986</option>
+				<option value="1985">1985</option>
+				<option value="1984">1984</option>
+			</select>
+
+		</div>
+		<div class="break">
+			<input class="submit_button" type="submit" value="submit the form" name="submit"/>
+		</div>
 
 	</form>
 
